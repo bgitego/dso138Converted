@@ -1,0 +1,92 @@
+ompiling C : 113-13801.c to FLASH_RUN/113-13801.o
+arm-none-eabi-gcc -c -mthumb -ggdb -O2 -mcpu=cortex-m3 -mthumb-interwork  -DSTM32F10X_MD -DHSE_VALUE=8000000UL -DSYSCLK_FREQ_72MHz=72000000 -DUSE_STDPERIPH_DRIVER -DUSE_JYE109-13800-00A -DSTM32_SD_USE_DMA -DSTARTUP_DELAY -DMOD_MTHOMAS_STMLIB -DUSE_FULL_ASSERT -DVECT_TAB_FLASH -DFLASH_RUN -DSTM32F10x_64k_20k -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/CM3/CoreSupport -I./Libraries -I./Legacy/inc -I. -mlong-calls -ffunction-sections -fdata-sections -Wall -Wextra -Wimplicit -Wcast-align -Wpointer-arith -Wredundant-decls -Wshadow -Wcast-qual -Wcast-align -Wa,-adhlns=FLASH_RUN/113-13801.lst -MD -MP -MF FLASH_RUN/dep/113-13801.o.d -Wnested-externs  -std=gnu99 113-13801.c -o FLASH_RUN/113-13801.o 
+<command-line>:0:11: warning: ISO C99 requires whitespace after the macro name
+In file included from ./Legacy/inc/legacy.h:51:0,
+                 from 113-13801.c:28:
+./Legacy/inc/cmsis_ref.h:97:3: error: #error "Please select first the target STM32xxxx device used in your application (in stm32xxxx.h file)"
+  #error "Please select first the target STM32xxxx device used in your application (in stm32xxxx.h file)"
+   ^~~~~
+In file included from 113-13801.c:28:0:
+./Legacy/inc/legacy.h:95:3: error: unknown type name 'uint8_t'
+   uint8_t NVIC_IRQChannel;                    /*!< Specifies the IRQ channel to be enabled or disabled.
+   ^~~~~~~
+./Legacy/inc/legacy.h:105:3: error: unknown type name 'uint8_t'
+   uint8_t NVIC_IRQChannelPreemptionPriority;  /*!< Specifies the pre-emption priority for the IRQ channel
+   ^~~~~~~
+./Legacy/inc/legacy.h:110:3: error: unknown type name 'uint8_t'
+   uint8_t NVIC_IRQChannelSubPriority;         /*!< Specifies the subpriority level for the IRQ channel specified
+   ^~~~~~~
+./Legacy/inc/legacy.h:116:3: error: unknown type name 'FunctionalState'
+   FunctionalState NVIC_IRQChannelCmd;         /*!< Specifies whether the IRQ channel defined in NVIC_IRQChannel
+   ^~~~~~~~~~~~~~~
+./Legacy/inc/legacy.h:164:26: error: unknown type name 'uint8_t'
+ void NVIC_SystemLPConfig(uint8_t LowPowerMode, FunctionalState NewState);
+                          ^~~~~~~
+./Legacy/inc/legacy.h:164:48: error: unknown type name 'FunctionalState'
+ void NVIC_SystemLPConfig(uint8_t LowPowerMode, FunctionalState NewState);
+                                                ^~~~~~~~~~~~~~~
+./Legacy/inc/legacy.h:166:26: error: unknown type name 'uint32_t'
+ void NVIC_SetVectorTable(uint32_t NVIC_VectTab, uint32_t Offset);
+                          ^~~~~~~~
+./Legacy/inc/legacy.h:166:49: error: unknown type name 'uint32_t'
+ void NVIC_SetVectorTable(uint32_t NVIC_VectTab, uint32_t Offset);
+                                                 ^~~~~~~~
+./Legacy/inc/legacy.h:214:1: error: unknown type name 'ErrorStatus'
+ ErrorStatus RTC_RefClockCmd(FunctionalState NewState);
+ ^~~~~~~~~~~
+./Legacy/inc/legacy.h:214:29: error: unknown type name 'FunctionalState'
+ ErrorStatus RTC_RefClockCmd(FunctionalState NewState);
+                             ^~~~~~~~~~~~~~~
+./Legacy/inc/legacy.h:215:1: error: unknown type name 'ErrorStatus'
+ ErrorStatus RTC_AlarmCmd(uint32_t RTC_Alarm, FunctionalState NewState);
+ ^~~~~~~~~~~
+./Legacy/inc/legacy.h:215:26: error: unknown type name 'uint32_t'
+ ErrorStatus RTC_AlarmCmd(uint32_t RTC_Alarm, FunctionalState NewState);
+                          ^~~~~~~~
+./Legacy/inc/legacy.h:215:46: error: unknown type name 'FunctionalState'
+ ErrorStatus RTC_AlarmCmd(uint32_t RTC_Alarm, FunctionalState NewState);
+                                              ^~~~~~~~~~~~~~~
+./Legacy/inc/legacy.h:217:1: error: unknown type name 'ErrorStatus'
+ ErrorStatus RTC_WakeUpCmd(FunctionalState NewState);
+ ^~~~~~~~~~~
+./Legacy/inc/legacy.h:217:27: error: unknown type name 'FunctionalState'
+ ErrorStatus RTC_WakeUpCmd(FunctionalState NewState);
+                           ^~~~~~~~~~~~~~~
+./Legacy/inc/legacy.h:221:1: error: unknown type name 'ErrorStatus'
+ ErrorStatus RTC_CoarseCalibConfig(uint32_t RTC_CalibSign, uint32_t Value);
+ ^~~~~~~~~~~
+./Legacy/inc/legacy.h:221:35: error: unknown type name 'uint32_t'
+ ErrorStatus RTC_CoarseCalibConfig(uint32_t RTC_CalibSign, uint32_t Value);
+                                   ^~~~~~~~
+./Legacy/inc/legacy.h:221:59: error: unknown type name 'uint32_t'
+ ErrorStatus RTC_CoarseCalibConfig(uint32_t RTC_CalibSign, uint32_t Value);
+                                                           ^~~~~~~~
+./Legacy/inc/legacy.h:222:1: error: unknown type name 'ErrorStatus'
+ ErrorStatus RTC_CoarseCalibCmd(FunctionalState NewState);
+ ^~~~~~~~~~~
+./Legacy/inc/legacy.h:222:32: error: unknown type name 'FunctionalState'
+ ErrorStatus RTC_CoarseCalibCmd(FunctionalState NewState);
+                                ^~~~~~~~~~~~~~~
+In file included from 113-13801.c:28:0:
+./Legacy/inc/legacy.h:706:15: error: unknown type name 'ADC_TypeDef'; did you mean 'NVIC_InitTypeDef'?
+ void ADC_Init(ADC_TypeDef* ADCx, LEGACY_ADC_InitTypeDef* ADC_InitStruct);
+               ^~~~~~~~~~~
+               NVIC_InitTypeDef
+./Legacy/inc/legacy.h:720:1: error: unknown type name 'ErrorStatus'
+ ErrorStatus RCC_WaitForHSEStartUp(void);
+ ^~~~~~~~~~~
+In file included from 113-13801.c:30:0:
+stm32f1xx_hal_conf.h:368:22: error: unknown type name 'uint8_t'
+   void assert_failed(uint8_t* file, uint32_t line);
+                      ^~~~~~~
+stm32f1xx_hal_conf.h:368:37: error: unknown type name 'uint32_t'
+   void assert_failed(uint8_t* file, uint32_t line);
+                                     ^~~~~~~~
+113-13801.c:31:10: fatal error: stm32f10x_conf.h: No such file or directory
+ #include "stm32f10x_conf.h"
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+Makefile:567: recipe for target 'FLASH_RUN/113-13801.o' failed
+make: *** [FLASH_RUN/113-13801.o] Error 1
+bot-10@bot10-VB /media/sf_Documents/DSO138/dso138Converted $ 
+
